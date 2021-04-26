@@ -1,1 +1,1 @@
-web guniconrn mysite.wsgi:apllication --log-file -
+web: waitress-serve --port=$PORT testdj.wsgi:application 
