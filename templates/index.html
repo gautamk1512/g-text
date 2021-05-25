@@ -40,7 +40,9 @@
             </div>
         </div>
 
-        <form action='/analyze' method='post'> {% csrf_token %}
+        <form action='/analyze' method='post'>
+            {% csrf_token %}
+
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success me-2" type="submit">Search</button>
 
@@ -81,11 +83,11 @@
         <footer class="bg-light text-center text-lg-start">
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-              © 2021 GautamTextutils:
-              <a class="text-dark" href="https://gautamk1512.blogspot.com/">LEARNING EINSTEIN</a>
+                © 2021 GautamTextutils:
+                <a class="text-dark" href="https://gautamk1512.blogspot.com/">LEARNING EINSTEIN</a>
             </div>
             <!-- Copyright -->
-          </footer>
+        </footer>
     </div>
 </body>
 

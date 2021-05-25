@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import django_heroku
 import dj_database_url
-import os
+# import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'm40miqw+j^8m&bquf=%hgpv6d**s6cyx4!$xj^y%0oeg5_p)eo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["g-text1512.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -78,11 +78,7 @@ WSGI_APPLICATION = 'textutils.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+    'default': dj_database_url.config()
 
 
 # Password validation
@@ -122,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+# STATIC_ROOT = BASE_DIR / 'static'
 
 # # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-# # django_heroku.settings(locals)
+    django_heroku.settings(locals())
